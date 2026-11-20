@@ -206,7 +206,7 @@ sudo apt install claude-desktop
 ```
 
 ![Figure 11](<Screenshots/Steps up to sudo apt update part 2.png>)
-*Figure 11: Intial steps of Claude desktop setup*
+*Figure 11: Initial steps of Claude desktop setup*
 
 3. **Sign In to Claude Desktop:** Once Claude Desktop is installed, open it from the Applications menu and complete the account sign-in process.
 
