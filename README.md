@@ -90,7 +90,7 @@ Possible uses of the lab include:
 
 
 
-![Week 3 Architecture](<Week 3 Architecture Diagram.png>)
+![Week 3 Architecture](<Screenshots/Week 3 Architecture Diagram.png>)
 *Figure 1: Week 3 Lab Architecture*
 
 
@@ -113,7 +113,7 @@ Possible uses of the lab include:
 
 4. **Extract and Save the PDF Hash:** Open the Online PDF Hash Extractor, upload `My Locked PDF1`, and copy the resulting hash string (making sure it starts cleanly with `$pdf$`). Paste the hash into Notepad and save it as `hash1.txt`.
 
-![Figure 2](<My Locked PDF1 Module 1 From Hash Website.png>)
+![Figure 2](<Screenshots/My Locked PDF1 Module 1 From Hash Website.png>)
 
 *Figure 2: My Locked PDF1 Hash Extractor*
 
@@ -121,17 +121,17 @@ Possible uses of the lab include:
 
 5. **Load the Hash File in Johnny GUI:** Return to Johnny GUI, click **Open password file**, browse to the saved `hash1.txt` file, and open it.
 
-![Figure 3](<My Locked PDF1 Module 1 From Johnny Initial.png>)
+![Figure 3](<Screenshots/My Locked PDF1 Module 1 From Johnny Initial.png>)
 *Figure 3: My Locked PDF1 initial image from Johnny GUI*
 
 6. **Run the Cracking Attack:** Click **Start new attack** in the top toolbar of Johnny GUI and wait for the tool to recover the password.
 
-![Figure 4](<My Locked PDF1 Module 1 From Johnny Cracked.png>)
+![Figure 4](<Screenshots/My Locked PDF1 Module 1 From Johnny Cracked.png>)
 *Figure 4: My Locked PDF1 password cracked from Johnny GUI*
 
 7. **Unlock the Encrypted PDF:** Copy the cracked password from Johnny GUI, open `My Locked PDF1`, paste the password into the password prompt, and submit it to unlock and view the PDF.
 
-![Figure 5](<My Locked PDF1 Module 1 Unlocked.png>)
+![Figure 5](<Screenshots/My Locked PDF1 Module 1 Unlocked.png>)
 
 *Figure 5: My Locked PDF1 password unlocked*
 
@@ -147,27 +147,27 @@ Possible uses of the lab include:
 
 2. **Extract the Hash Using Networkwalks Hash Calculator:** Open the Networkwalks Hash Calculator in a web browser (`https://networkwalks.com`), upload `My Locked PDF1 (for NW Tools Lab WK3-PM2)`, and copy the complete `$pdf$` hash value generated.
 
-![Figure 6](<Hash Calculator Initial.png>)
+![Figure 6](<Screenshots/Hash Calculator Initial.png>)
 *Figure 6: Hash Calculator*
 
 
-![Figure 7](<My Locked PDF1 (for NW Tools Lab) Module 2 From Hash Calculator.png>)
+![Figure 7](<Screenshots/My Locked PDF1 (for NW Tools Lab) Module 2 From Hash Calculator.png>)
 *Figure 7: Hash Output*
 
 
 3. **Crack the Password Using Networkwalks Password Cracker:** Open the Networkwalks Password Cracker (`https://networkwalks.com`), paste the copied `$pdf$` hash into the input box, and click **START CRACKING** using the default **built-in list (100 words)** to recover the password.
    * *Note:* Testing can also be achieved by uploading a custom wordlist like the `JTR_default_password.txt` (3,556 words).
 
-![Figure 8](<Password Cracker with default wordlist.png>)
+![Figure 8](<Screenshots/Password Cracker with default wordlist.png>)
 *Figure 8: Password cracker with default wordlist*
 
-![Figure 9](<My Locked PDF1 (for NW Tools Lab) Module 2 From Password Cracker-1.png>)
+![Figure 9](<Screenshots/My Locked PDF1 (for NW Tools Lab) Module 2 From Password Cracker.png>)
 *Figure 9: Password revealed for the My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf*
 
 
 4. **Unlock and Verify the PDF:** Copy the cracked password, open `My Locked PDF1 (for NW Tools Lab WK3-PM2)`, and enter the password to unlock and verify the file.
 
-![Figure 10](<My Locked PDF1 (for NW Tools Lab) Module 2 Unlocked.png>)
+![Figure 10](<Screenshots/My Locked PDF1 (for NW Tools Lab) Module 2 Unlocked.png>)
 
 *Figure 10: Result of My Locked PDF1 (for NW Tools Lab WK3-PM2) using NW (Networkwalks) Tools*
 
@@ -205,7 +205,7 @@ sudo apt install claude-desktop
 
 ```
 
-![Figure 11](<Steps up to sudo apt update part 2.png>)
+![Figure 11](<Screenshots/Steps up to sudo apt update part 2.png>)
 *Figure 11: Intial steps of Claude desktop setup*
 
 3. **Sign In to Claude Desktop:** Once Claude Desktop is installed, open it from the Applications menu and complete the account sign-in process.
@@ -236,7 +236,7 @@ rm -rf ~/pip-tmp
 
 ```
 
-![Figure 12](<Before the hexstrike sever command.png>)
+![Figure 12](<Screenshots/Before the hexstrike sever command.png>)
 *Figure 12: A step before the Hexstrike command*
 
 5. **Start the HexStrike Server:** Keep the virtual environment active and run `hexstrike_server.py` to launch the HexStrike API server on `http://localhost:8888`:
@@ -252,7 +252,7 @@ source hexstrike-env/bin/activate
 python3 hexstrike_server.py
 ```
 
-![Figure 13](<Initial hexstrike banner.png>)
+![Figure 13](<Screenshots/Initial hexstrike banner.png>)
 *Figure 13: Hexstrike initial banner*
 
 
@@ -276,29 +276,29 @@ cat << 'EOF' > ~/.config/Claude/claude_desktop_config.json
 EOF
 ```
 
-![Figure 14](<Edit Config area.png>)
+![Figure 14](<Screenshots/Edit Config area.png>)
 *Figure 14: Edit Config*
 
-![Figure 15](<Verfifying the JSON file part 1.png>)
+![Figure 15](<Screenshots/Verfifying the JSON file part 1.png>)
 
 *Figure 15: JSON file Part 1*
 
-![Figure 16](<Verfifying the JSON file part 2.png>)
+![Figure 16](<Screenshots/Verfifying the JSON file part 2.png>)
 
 *Figure 16: JSON file Part 2*
 
-![Figure 17](<Verfifying the JSON file part 3.png>)
+![Figure 17](<Screenshots/Verfifying the JSON file part 3.png>)
 
 *Figure 17: JSON file Part 3*
 
 
 7. **Restart Claude Desktop and Verify the Server:** Force-close Claude Desktop (`pkill -9 -f claude`) so it reloads the updated configuration, reopen it, and confirm `hexstrike-ai`. Another way to verify is under **Settings → Desktop app → Extensions** where you see hexstrike running. Thirdly, a checkmark under **Settings → Customize → Connectors** (as well as verifying the `HTTP 200` health check response in the HexStrike server terminal).
 
-![Figure 18](<Verified Server Part 1.png>)
+![Figure 18](<Screenshots/Verified Server Part 1.png>)
 *Figure 18: Verified via Desktop app*
 
 
-![Figure 19](<Verified the hexstrike ai registered.png>)
+![Figure 19](<Screenshots/Verified the hexstrike ai registered.png>)
 *Figure 19: Verified via Customize -> Connectors*
 
 8. Open a new chat in Claude Desktop and test the quality of the server connection by sending the prompt below.
@@ -307,10 +307,10 @@ EOF
 
 > please check the health of this hexstrike MCP server.
 
-![Figure 20](<hexstrike MCP sever health.png>)
+![Figure 20](<Screenshots/hexstrike MCP sever health.png>)
 *Figure 20: Server health*
 
-![Figure 21](<hexstrike MCP sever health Continued.png>)
+![Figure 21](<Screenshots/hexstrike MCP sever health Continued.png>)
 *Figure 21: Server health Continued*
 
 
@@ -335,7 +335,7 @@ source hexstrike-env/bin/activate
 python3 hexstrike_server.py
 
 ```
-![Figure 22](<start HexStrike Server.png>)
+![Figure 22](<Screenshots/start HexStrike Server.png>)
 *Figure 22: Started HexStrike-AI MCP Server*
 
 
@@ -345,14 +345,14 @@ python3 hexstrike_server.py
      > Check if John the Ripper is installed in this Hexstrike MCP and show me its version
 
 
-     ![Figure 23](prompt1.png)
+     ![Figure 23](Screenshots/prompt1.png)
      *Figure 23: Natural Language Prompt 1*
 
    * **Natural Language Prompt 2 (Calculate File Hash):**
      > Please calculate the hash value of this PDF file: /home/kali/Desktop/hash3.networkwalks_flag1.pdf
 
 
-     ![Figure 24](prompt2.png)
+     ![Figure 24](Screenshots/prompt2.png)
      *Figure 24: Natural Language Prompt 2*
 
 
@@ -360,14 +360,14 @@ python3 hexstrike_server.py
      > Please use JTR tool in this hexstrike MCP server to crack the password of this PDF file. Use the rockyou.txt wordlist dictionary.
 
 
-     ![Figure 25](<prompt3 and result.png>)
+     ![Figure 25](<Screenshots/prompt3 and result.png>)
      *Figure 25: Natural Language Prompt 3*
 
 
 4. **Repeat for Additional Encrypted Files:** Repeat Steps 1 and 3 for any other password-protected files (such as encrypted PDF, ZIP, or Office documents). Below is the result for `hash3.networkwalks_flag3.pdf` (renamed from `My Locked PDF3.pdf`), which also matched the recovered password obtained in Modules 1 and 2:
 
 
-![Figure 26](<Another result from another locked pdf.png>)
+![Figure 26](<Screenshots/Another result from another locked pdf.png>)
 *Figure 26: hash3.networkwalks_flag3.pdf result*
 
 
@@ -492,6 +492,8 @@ Setting up the HexStrike-AI MCP server with Claude Desktop in Kali Linux showed 
 
 - **VirtualBox:** [https://virtualbox.org/wiki/Downloads](https://virtualbox.org/wiki/Downloads)
 - **Kali Linux:** [https://kali.org/get-kali](https://kali.org/get-kali)
+- **Text Files:** [Text Files Mentioned in Lab](./Text%20Files)
+
 
 
 ---
